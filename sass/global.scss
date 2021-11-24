@@ -113,33 +113,26 @@ header{
 /*-----------------------LIST SECTION-----------------------------------*/
 
 .listSection{
-    margin: 2%;
-}
-
-.listContainer{
     display: flex;
     flex-direction: column;
     margin: 0px 2% 0% 2%;
     gap: 3%;
 }
 
-.header1{
-    background-color: $pinkcolor;
-    text-align: center;
-    border-radius: $border-radius;
-    font-family: 'Lobster Two';
-    font-size: 3rem;
-    margin: 5% 2% 2% 2%;
-}
-
-.list{
+.listContainer{
     padding: 1%;
     color: $textcolor-total;
     text-align: center;
 }
 
-ul{
-    list-style: none;
+.h3List{
+    background-color: $pinkcolor;
+    color: rgb(51, 49, 49);
+    text-align: center;
+    border-radius: $border-radius;
+    font-family: 'Lobster Two';
+    font-size: 3rem;
+    margin: 5% 2% 2% 2%;
 }
 
 li{
@@ -150,16 +143,6 @@ li{
     line-height: 40px;
     margin-top: 2%;
     box-shadow:-6px 6px 4px rgb(121, 139, 137);
-}
-
-span{
-    width: 3rem;
-    text-align: center;
-    background-color: $pinkcolor ;
-    position: absolute;
-    top: 0;
-    right: 0;
-    color: $textcolor-total;
 }
 
 /*-----------------------FOOTER---------------------------------------*/
@@ -192,14 +175,13 @@ footer{
         margin: 5px;
     }
 
-    .listContainer{
+    .listSection{
         flex-direction: row;
         min-height: 200px;   
     }
 
-    .list{
+    .listContainer{
         width: 100%;
-        
     }
 
     footer{
@@ -211,6 +193,5 @@ footer{
     .inputContainer{  
         width: 900px;
     }
-
 }
 

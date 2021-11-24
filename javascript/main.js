@@ -3,116 +3,103 @@ const option= document.querySelector (".optionContainer");
 const description = document.querySelector(".description");
 const amount = document.querySelector(".amount");
 const btn = document.querySelector(".addItemBtn");
-
-const liCost = document.querySelector (".listCost");
-const liIncome= document.querySelector(".listIncome");
-
+const costDiv = document.querySelector (".listCostDiv");
+const incomeDiv= document.querySelector(".listIncomeDiv");
 const income = document.querySelector (".totalInc");
 const balance = document.querySelector(".totalBalance");
 const costs = document.querySelector(".totalCost");
 
-//const spanX= document.querySelector("span");
 
-
-// VARIABLES
-let kostnadLista = [];
-let inkomstLista = [];
-
+// DEFINED VARIABLES 
+let costslist = [];
+let incomelist = [];
+var costSum= 0;
+var incomeSum=0;
 
 // EVENT LISTENERS
-
 btn.addEventListener("click", addtolist);
 btn.addEventListener("click", calculateBudget);
-//spanX.addEventListener("click", removeItem);
-//spanX.addEventListener("click", calculateBudget);
-
-
 
 
 // FUNCTIONS
-
 function addtolist(e) {
     e.preventDefault();
 
     if(option.value =="+"){   
-        
-        inkomstLista.push(amount.value);
-        console.log (inkomstLista);
-        liIncome.innerHTML   += `<li>${description.value} ${amount.value}<span> ${"x"} </span></li>`
+        incomelist.push(amount.value);
+        incomeDiv.innerHTML   += `<li>${description.value} ${amount.value}</li>`
+        amount.value= "";
+        description.value= "";
     }
 
-    else if (option.value =="-") {
-
-        kostnadLista.push(amount.value);
-        console.log (kostnadLista)
-        liCost.innerHTML += `<li> ${description.value}  ${amount.value} <span> ${"x"} </span></li>`
-        
+    else if (option.value =="-"){
+        costslist.push(amount.value);
+        costDiv.innerHTML += `<li> ${description.value}  ${amount.value} </li>`
+        amount.value= "";
+        description.value= "";
     }
 
     else {
-        alert("Du måste välja");
+        alert("Du måste välja +/-");
     } 
-
-
-    /*const item = document.querySelectorAll("span");
-    //const list = document.querySelectorAll("li");
-    for(let i=0; i<item.length; i++){
-        item[i].addEventListener("click", ()=>{
-            item[i].parentElement.style.display = "none";
-            
-        })
-
-    }*/
-
-    const item = document.querySelectorAll("span");
-    const list = document.querySelectorAll("li");
-    const ul = document.querySelectorAll ("ul");
-    for(let i=0; i<item.length; i++){
-        item[i].addEventListener("click", function(){
-            ul.removeChild(list);
-        })
-
-    }
-    
-
 }
-
-
 
 function calculateBudget(e) {
     e.preventDefault();
     
-    var kostnadSumma= 0;
-    for( var i= 0; i<kostnadLista.length ; i++){
-        kostnadSumma += Number(kostnadLista[i]);
+    for( var i= 0; i<costslist.length ; i++){
+        costSum += Number(costslist[i]);
     }
 
-    var inkomstSumma=0;
-    for( var i= 0; i<inkomstLista.length; i++)
-    { 
-        inkomstSumma += Number(inkomstLista[i])
+    for( var i= 0; i<incomelist.length; i++){ 
+        incomeSum += Number(incomelist[i])
     }
 
-    console.log(inkomstSumma, kostnadSumma)
+    costs.textContent = costSum;
+    income.textContent = incomeSum;
+    balance.textContent = incomeSum-costSum; 
+}
 
-    costs.textContent = kostnadSumma;
-    income.textContent = inkomstSumma;
-    balance.textContent = inkomstSumma-kostnadSumma; 
+
+//spanX.addEventListener("click", removeItem);
+//spanX.addEventListener("click", calculateBudget);
+
+//const spanX= document.querySelector("span");
+
+/*
+
+const item = document.querySelectorAll("span");
+const list = document.querySelectorAll("li");
+for(let i=0; i<item.length; i++){
+    item[i].addEventListener("click", ()=>{
+        item[i].parentElement.style.display = "none";
+        
+    })
+
+}
+
+const item = document.querySelectorAll("span");
+const list = document.querySelectorAll("li");
+const ul = document.querySelectorAll ("ul");
+for(let i=0; i<item.length; i++){
+    item[i].addEventListener("click", function(){
+        ul.removeChild(list);
+    })
+
 }
 
 
 
-
-/*
-//const removeItem = document.querySelectorAll("span");
-    for(let i=0; i<removeItem.length; i++){
-        removeItem[i].addEventListener("click", ()=>{
-            removeItem[i].parentElement.style.display = "none";
-           // console.log ("hmmmm");
-        
-        })  
-        
-    }*/
+const removeItem = document.querySelectorAll("span");
+for(let i=0; i<removeItem.length; i++){
+    removeItem[i].addEventListener("click", ()=>{
+        removeItem[i].parentElement.style.display = "none";
+        // console.log ("hmmmm");
+    
+    })  
+    
+}
+*/
 
 
 
