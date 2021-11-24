@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inlämningsuppgift-2</title>
+    <script src="./javascript/main.js" defer></script>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+</head>
+<body>  
+    <header>
+        <h1> Budget appen</h1>
+    </header>
+
+    <main>
+        <form class="inputContainer">
+            <select class= optionContainer name="" id="Type">
+                <option value="choose" class="choose"><strong> Välj +/-</strong></option>
+                <option value="+" class="plus">+</option>
+                <option value="-" class="minus">-</option>
+            </select> 
+            <input type="text" name="" class="description" placeholder="Beskrivning...">
+            <input type="number" name"" class="amount" placeholder="Belopp...">
+            <button class="addItemBtn"><strong>Lägg till i lista</strong></button>
+        </form>
+
+        <section class= "totalsContainer">
+            <div class= "totalDiv">
+                <h3 class="h3Total">Inkomster</h3> 
+                <div class="totalInc"></div>
+                <img class="icone" src="./image/icons8-coins-50.png" alt="">
+            </div>  
+            <div class= "totalDiv" id="costDiv">
+                <h3 class="h3Total">Utgifter</h3>
+                <div class="totalCost"></div>
+                <img class="icone" src="./image/baseline_payment_white_24dp.png" alt="">
+            </div>
+            <div class= "totalDiv" id="balanceDiv">
+                <h3 class="h3Total">Balans</h3>
+                <div class="totalBalance"></div>
+                <img class="icone" src="./image/outline_savings_white_24dp.png" alt="">
+            </div>
+        </section>
+
+        <section class=listSection>
+            <h1 class="header1">Lista</h1>
+            <section class="listContainer">
+                <article class="list">
+                    <h3>Inkomster:</h3>
+                    <ul class="listIncome">   
+                    </ul>
+                </article>
+                <article class="list">
+                    <h3>Utgifter:</h3>
+                    <ul class="listCost">
+                    </ul>
+                </article>
+            </section>  
+        </section>  
+
+    </main>
+
+    <footer></footer>
+</body>
+</html>

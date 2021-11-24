@@ -1,0 +1,216 @@
+body{
+    box-sizing: border-box;
+    margin: auto;
+    padding: 0;
+    color: rgb(51, 49, 49);
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    max-width: 900px; 
+}
+
+/*-----------------------HEADER---------------------------------------*/
+
+header{
+    background-color: $pinkcolor;
+    margin: $margin;
+    text-align: center;
+    border-radius: $border-radius;
+    font-family: 'Lobster Two';
+    font-size: 2rem;
+    padding: 2%;
+}
+
+/*-----------------------INPUT SECTION---------------------------------*/
+
+.inputContainer{
+    justify-items: center;
+    padding: 2%;
+    text-align: center;  
+    width: 250px;
+    margin: auto;
+}
+
+.optionContainer{
+    border-radius: $border-radius;
+    border: 3px solid $textcolor-total;
+    text-align: center;
+    padding: 2%; 
+    font-size: 16px;
+}
+
+.description{
+    border: 3px solid $textcolor-total;
+    border-radius: $border-radius;
+    font-size: 16px;
+    padding: 2%;
+    margin-top: 2%; 
+}
+
+.amount{
+    border: 3px solid $textcolor-total;
+    border-radius: $border-radius;
+    font-size: 16px;
+    padding: 2%;  
+    margin-top: 2%;
+}
+
+.addItemBtn{
+    border-radius: $border-radius;
+    height: 40px;
+    background-color: $textcolor-total;
+    color: whitesmoke; 
+    font-size: 1rem;
+    margin: 3%;
+}
+
+
+/*-----------------------TOTAL SECTION---------------------------------------*/
+
+.totalsContainer{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: 90%;   
+} 
+
+.totalDiv{
+    background-color: $maincolor;
+    border-radius: $border-radius;
+    padding: 2%;
+    margin: 2%;
+    position: relative;
+    height: 100px;
+}
+
+.totalInc {
+    font-size: 2rem;
+    text-align: center;
+}
+
+.totalCost {
+    font-size: 2rem;
+    text-align: center;
+}
+
+.totalBalance {
+    font-size: 2rem;
+    text-align: center;   
+}
+
+.h3Total{
+    color: $textcolor-total;
+    text-align: center;
+}
+
+.icone {
+    position: absolute;
+    left: 7%;
+    top: 12%;
+    width: 20%;
+}
+
+
+/*-----------------------LIST SECTION-----------------------------------*/
+
+.listSection{
+    margin: 2%;
+}
+
+.listContainer{
+    display: flex;
+    flex-direction: column;
+    margin: 0px 2% 0% 2%;
+    gap: 3%;
+}
+
+.header1{
+    background-color: $pinkcolor;
+    text-align: center;
+    border-radius: $border-radius;
+    font-family: 'Lobster Two';
+    font-size: 3rem;
+    margin: 5% 2% 2% 2%;
+}
+
+.list{
+    padding: 1%;
+    color: $textcolor-total;
+    text-align: center;
+}
+
+ul{
+    list-style: none;
+}
+
+li{
+    display: block;
+    position: relative;
+    background-color: $maincolor;
+    height: 40px;
+    line-height: 40px;
+    margin-top: 2%;
+    box-shadow:-6px 6px 4px rgb(121, 139, 137);
+}
+
+span{
+    width: 3rem;
+    text-align: center;
+    background-color: $pinkcolor ;
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: $textcolor-total;
+}
+
+/*-----------------------FOOTER---------------------------------------*/
+
+footer{
+    height: 200px;
+    background-image: url(../image/savings-box-161876_960_720.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position-x: right;
+    background-position-y: bottom;
+}
+
+/*-----------------------MEDIA QUERIES--------------------------------*/
+
+
+@media screen and (min-width: 600px){
+ 
+    .inputContainer{  
+        width: 570px;
+    }
+
+    .totalsContainer{
+        flex-direction: row;
+        width: 96%;
+    } 
+
+    .totalDiv{
+        width: 300px;
+        margin: 5px;
+    }
+
+    .listContainer{
+        flex-direction: row;
+        min-height: 200px;   
+    }
+
+    .list{
+        width: 100%;
+        
+    }
+
+    footer{
+        height: 300px;
+    }
+}
+
+@media screen and (min-width:800px){
+    .inputContainer{  
+        width: 900px;
+    }
+
+}
+
