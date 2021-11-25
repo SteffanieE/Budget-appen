@@ -12,15 +12,12 @@ const costs = document.querySelector(".totalCost");
 // DEFINED VARIABLES 
 let costslist = [];
 let incomelist = [];
-var costSum= 0;
-var incomeSum=0;
 
 // EVENT LISTENERS
-btn.addEventListener("click", addtolist);
-btn.addEventListener("click", calculateBudget);
+btn.addEventListener("click", addItemToList);
 
 // FUNCTIONS
-function addtolist(e) {
+function addItemToList(e) {
     e.preventDefault();
 
     if(option.value =="+"){   
@@ -38,17 +35,15 @@ function addtolist(e) {
     }
 
     else {
-        alert("Du måste välja +/-");
+        alert("Du måste välja +/-")
     } 
-}
-
-function calculateBudget(e) {
-    e.preventDefault();
     
+    var costSum= 0;
     for( var i= 0; i<costslist.length ; i++){
         costSum += Number(costslist[i]);
     }
 
+    var incomeSum=0;
     for( var i= 0; i<incomelist.length; i++){ 
         incomeSum += Number(incomelist[i])
     }
