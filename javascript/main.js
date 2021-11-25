@@ -9,7 +9,6 @@ const income = document.querySelector (".totalInc");
 const balance = document.querySelector(".totalBalance");
 const costs = document.querySelector(".totalCost");
 
-
 // DEFINED VARIABLES 
 let costslist = [];
 let incomelist = [];
@@ -19,7 +18,6 @@ var incomeSum=0;
 // EVENT LISTENERS
 btn.addEventListener("click", addtolist);
 btn.addEventListener("click", calculateBudget);
-
 
 // FUNCTIONS
 function addtolist(e) {
@@ -59,49 +57,3 @@ function calculateBudget(e) {
     income.textContent = incomeSum;
     balance.textContent = incomeSum-costSum; 
 }
-
-
-//spanX.addEventListener("click", removeItem);
-//spanX.addEventListener("click", calculateBudget);
-
-//const spanX= document.querySelector("span");
-
-/*
-
-const item = document.querySelectorAll("span");
-const list = document.querySelectorAll("li");
-for(let i=0; i<item.length; i++){
-    item[i].addEventListener("click", ()=>{
-        item[i].parentElement.style.display = "none";
-        
-    })
-
-}
-
-const item = document.querySelectorAll("span");
-const list = document.querySelectorAll("li");
-const ul = document.querySelectorAll ("ul");
-for(let i=0; i<item.length; i++){
-    item[i].addEventListener("click", function(){
-        ul.removeChild(list);
-    })
-
-}
-
-
-
-const removeItem = document.querySelectorAll("span");
-for(let i=0; i<removeItem.length; i++){
-    removeItem[i].addEventListener("click", ()=>{
-        removeItem[i].parentElement.style.display = "none";
-        // console.log ("hmmmm");
-    
-    })  
-    
-}
-*/
-
-
-
-
-
