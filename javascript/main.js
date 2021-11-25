@@ -1,4 +1,4 @@
-// SELECT ELEMENTS
+// SELECTOR ELEMENTS
 const option= document.querySelector (".optionContainer");
 const description = document.querySelector(".description");
 const amount = document.querySelector(".amount");

@@ -2,7 +2,7 @@ body{
     box-sizing: border-box;
     margin: auto;
     padding: 0;
-    color: rgb(51, 49, 49);
+    color: $headertextcolor;
     font-family:Arial, Helvetica, sans-serif;
     font-size: 1rem;
     max-width: 900px; 
@@ -15,7 +15,7 @@ header{
     margin: $margin;
     text-align: center;
     border-radius: $border-radius;
-    font-family: 'Lobster Two';
+    font-family:$headerfont;
     font-size: 2rem;
     padding: 2%;
 }
@@ -120,24 +120,25 @@ header{
 }
 
 .listContainer{
-    padding: 1%;
-    color: $textcolor-total;
+    border-radius: $border-radius;
+    padding: 2%;
     text-align: center;
 }
 
 .h3List{
     background-color: $pinkcolor;
-    color: rgb(51, 49, 49);
+    color: $headertextcolor;
     text-align: center;
     border-radius: $border-radius;
-    font-family: 'Lobster Two';
-    font-size: 3rem;
+    font-family: $headerfont;
+    font-size: 2rem;
     margin: 5% 2% 2% 2%;
 }
 
 li{
     display: block;
     position: relative;
+    font-size: 20px;
     background-color: $maincolor;
     height: 40px;
     line-height: 40px;
@@ -182,6 +183,7 @@ footer{
 
     .listContainer{
         width: 100%;
+        margin-top: 5%;
     }
 
     footer{
